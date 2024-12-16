@@ -1,4 +1,4 @@
-import image from "../../public/image.png"
+import image from "../../public/profile.png"
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 

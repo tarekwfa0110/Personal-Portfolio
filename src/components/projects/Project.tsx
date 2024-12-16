@@ -1,12 +1,12 @@
 import { FaGithub } from "react-icons/fa6"
 function Project({image, name, year, description, github}) {
     return (
-        <div className="flex justify-between">
-            <div className="w-1/2 h-[500px] bg-[#1A1A1A] p-12 flex items-center justify-center">
+        <div className="flex justify-between items-center">
+            <div className="w-1/2 bg-[#1A1A1A] px-12 py-24 flex items-center justify-center">
                 <img src={image} />
             </div>
 
-            <div className="w-1/2 h-[500px] p-12 flex flex-col gap-6">
+            <div className="w-1/2 p-12 flex flex-col gap-6">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-5xl font-bold text-white">{name}</h1>
                     <p className="text-[#C7C7C7]">{description}</p>
