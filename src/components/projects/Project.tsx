@@ -24,7 +24,7 @@ function Project({image, name, year, description, github}) {
                 </div>
                 <div className="flex gap-4 items-center">
                     <button className="bg-[#D3E97A] text-black font-semibold p-3 rounded-md">View Project</button>
-                    <a href="https://github.com/tarekwfa0110" target="_blank"><button className="text-[#D3E97A] p-2 rounded-full flex justify-center items-center"><FaGithub className="w-8 h-8"/></button></a>
+                    <a href={github} target="_blank"><button className="text-[#D3E97A] p-2 rounded-full flex justify-center items-center"><FaGithub className="w-8 h-8"/></button></a>
                 </div>
             </div>
         </div>
