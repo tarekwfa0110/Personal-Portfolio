@@ -1,8 +1,8 @@
-import  { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import { FaGithub, FaInstagram, FaLinkedinIn, FaX } from 'react-icons/fa6';
 import ContactForm from './ContactForm';
 
-const Connect = forwardRef<HTMLDivElement>((props, ref) => {
+const Connect = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <div ref={ref} className="text-white flex justify-between" id="contact">
             <div className="flex flex-col gap-4 w-1/2">
@@ -42,7 +42,6 @@ const Connect = forwardRef<HTMLDivElement>((props, ref) => {
                 </div>
             </div>
             <ContactForm />
-
         </div>
     );
 });

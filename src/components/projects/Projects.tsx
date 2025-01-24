@@ -1,9 +1,9 @@
-import  { forwardRef } from 'react';
+import { forwardRef } from 'react';
 import Project from "./Project";
 import project1 from "../../../public/project1.png";
 import admindashboard from "../../../public/admin-dashboard.png";
 
-const Projects = forwardRef<HTMLDivElement>((props, ref) => {
+const Projects = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <div ref={ref} className="px-12 flex flex-col gap-12">
             <div className="flex flex-col gap-2">
