@@ -1,9 +1,7 @@
-import React, { forwardRef } from 'react';
+import  { forwardRef } from 'react';
 import Project from "./Project";
-import quiz from "../../../public/quiz.png";
+import project1 from "../../../public/project1.png";
 import admindashboard from "../../../public/admin-dashboard.png";
-import ecommerce from "../../../public/ecommerce.png";
-
 
 const Projects = forwardRef<HTMLDivElement>((props, ref) => {
     return (
@@ -14,7 +12,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
             </div>
 
             <Project
-                image={ecommerce}
+                image={project1}
                 name={"E-Commerce Platform"}
                 year={2024}
                 description={
@@ -31,12 +29,12 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                         <p className="text-[#C7C7C7] leading-relaxed">Scalable project <span className="font-bold text-white">showcasing front-end development skills</span>.</p>
                     </>
                 }
-                github={"https://github.com/tarekwfa0110/E-commerce"}
+                github={"https://github.com/tarekwfa0110/E-Commerce"}
             />
             <Project
                 image={admindashboard}
                 name={"Admin Dashboard"}
-                year={2024}
+                year={2023}
                 description={
                     <>
                         <p className="text-[#C7C7C7] mb-4 leading-relaxed">Comprehensive <span className="font-bold text-white">admin management system</span> with powerful features.</p>
@@ -53,9 +51,9 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                 github={"https://github.com/tarekwfa0110/Admin-Dashboard"}
             />
             <Project
-                image={quiz}
+                image={project1}
                 name={"React Quiz App"}
-                year={2024}
+                year={2022}
                 description={
                     <>
                         <p className="text-[#C7C7C7] mb-4 leading-relaxed">Interactive <span className="font-bold text-white">quiz application</span> built with React.</p>
@@ -66,7 +64,7 @@ const Projects = forwardRef<HTMLDivElement>((props, ref) => {
                             <li className="mb-2 pl-2"><span className="font-semibold text-white">Timer and Progress Tracking</span>.</li>
                             <li className="mb-2 pl-2"><span className="font-semibold text-white">Results Analysis</span>.</li>
                         </ol>
-                        <p className="text-[#C7C7C7] leading-relaxed">Highlights <span className="font-bold text-white">interactive web application development.</span></p>
+                        <p className="text-[#C7C7C7] leading-relaxed">Highlights <span className="font-bold text-white">interactive web application development</span>.</p>
                     </>
                 }
                 github={"https://github.com/tarekwfa0110/React-Quiz"}
