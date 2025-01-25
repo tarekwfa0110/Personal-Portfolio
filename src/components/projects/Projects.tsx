@@ -1,18 +1,19 @@
 import { forwardRef } from 'react';
 import Project from "./Project";
-import project1 from "../../../public/project1.png";
 import admindashboard from "../../../public/admin-dashboard.png";
+import ecommerce from "../../../public/ecommerce.png";
+import quiz from "../../../public/quiz.png";
 
 const Projects = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className="px-12 flex flex-col gap-12">
-            <div className="flex flex-col gap-2">
+        <div ref={ref} className="px-12 flex flex-col gap-36">
+            <div className="flex flex-col gap-2 pb-14">
                 <h1 className="text-5xl text-white">Featured Projects</h1>
                 <h2 className="text-[#C7C7C7]">Here are some of the selected projects that showcase my passion for front-end development.</h2>
             </div>
 
             <Project
-                image={project1}
+                image={ecommerce}
                 name={"E-Commerce Platform"}
                 year={2024}
                 description={
@@ -51,7 +52,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
                 github={"https://github.com/tarekwfa0110/Admin-Dashboard"}
             />
             <Project
-                image={project1}
+                image={quiz}
                 name={"React Quiz App"}
                 year={2022}
                 description={

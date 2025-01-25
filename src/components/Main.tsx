@@ -10,7 +10,7 @@ function Main() {
                 <h1 className="text-7xl font-bold">HI I AM,
                     <br />
                     TAREK WFA.</h1>
-                <p className="text-[#C7C7C7]">A Sydney based front-end developer passionate about building accessible and user friendly websites.</p>
+                <p className="text-[#C7C7C7]">An Egypt based front-end developer passionate about building accessible and user friendly websites.</p>
                 <div className="flex gap-8 items-center  justify-between w-fit">
                     <a href=""><button className="bg-[#D3E97A] text-black font-semibold p-3 rounded-md">Contact Me</button></a>
                     <div className="flex gap-2">

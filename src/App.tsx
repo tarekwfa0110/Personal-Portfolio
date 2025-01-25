@@ -5,7 +5,6 @@ import Connect from "./components/Connect";
 import Main from "./components/Main";
 import Nav from "./components/Nav";
 import Projects from "./components/projects/Projects";
-import ContactForm from "./components/ContactForm";
 
 const App: React.FC = () => {
   // Refs for scrolling to sections
@@ -36,7 +35,6 @@ const App: React.FC = () => {
       <hr />
       <Connect ref={contactRef} />
       <hr />
-      <ContactForm />
     </div>
   );
 };
