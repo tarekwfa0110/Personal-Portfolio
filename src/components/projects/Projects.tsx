@@ -31,6 +31,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
                     </>
                 }
                 github={"https://github.com/tarekwfa0110/E-Commerce"}
+                project={"https://e-commerce-r89tgfkkw-tarekwfa0110s-projects.vercel.app/"}
             />
             <Project
                 image={admindashboard}
@@ -50,6 +51,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
                     </>
                 }
                 github={"https://github.com/tarekwfa0110/Admin-Dashboard"}
+                project={"https://admin-dashboard-gamma-roan-62.vercel.app/"}
             />
             <Project
                 image={quiz}
@@ -69,6 +71,7 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
                     </>
                 }
                 github={"https://github.com/tarekwfa0110/React-Quiz"}
+                project={"https://tarekwfa0110.github.io/React-Quiz/"}
             />
         </div>
     );
