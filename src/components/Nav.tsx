@@ -9,10 +9,10 @@ interface NavProps {
 
 const Nav: React.FC<NavProps> = ({ scrollToSection, aboutRef, servicesRef, contactRef }) => {
   return (
-    <div className="flex justify-between items-center text-[#C7C7C7]">
-      <h1 className="text-3xl">TAREK WFA</h1>
-      <nav>
-        <ul className="flex justify-between items-center gap-4">
+    <div className="flex flex-col md:flex-row justify-between items-center text-[#C7C7C7] gap-4 md:gap-0">
+      <h1 className="text-2xl md:text-3xl">TAREK WFA</h1>
+      <nav className="w-full md:w-auto">
+        <ul className="flex justify-center md:justify-between items-center gap-4">
           <li
             className="cursor-pointer hover:bg-[#C7C7C7] hover:text-black p-3 rounded-md"
             onClick={() => scrollToSection(servicesRef)}

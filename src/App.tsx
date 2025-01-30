@@ -20,8 +20,8 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="px-24 py-12 bg-black min-h-screen flex flex-col gap-12 justify-between">
-    <Nav
+    <div className="px-4 md:px-12 lg:px-24 py-6 md:py-12 bg-black min-h-screen flex flex-col gap-12 justify-between">
+      <Nav
         scrollToSection={scrollToSection}
         aboutRef={aboutRef}
         servicesRef={servicesRef}

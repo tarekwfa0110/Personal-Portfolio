@@ -1,78 +1,36 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm: React.FC = () => {
-    const [formStatus, setFormStatus] = useState<"success" | "error" | null>(null);
-    const [errorMessage, setErrorMessage] = useState("");
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-
-        try {
-            const response = await fetch("https://formspree.io/f/xrbgwqaa", {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json",
-                },
-            });
-
-            if (response.ok) {
-                setFormStatus("success");
-                setErrorMessage("");
-                e.currentTarget.reset();
-            } else {
-                const errorData = await response.json();
-                setFormStatus("error");
-
-                if (errorData.errors && errorData.errors.length > 0) {
-                    setErrorMessage(errorData.errors.map((err: { message: string }) => err.message).join(", "));
-                } else {
-                    setErrorMessage("An unexpected server error occurred. Please try again.");
-                }
-            }
-        } catch (error) {
-            setFormStatus("error");
-            if (error instanceof Error && error.message === "Failed to fetch") {
-                setErrorMessage("Network error: Please check your internet connection.");
-            } else {
-                setErrorMessage("An unexpected error occurred. Please try again.");
-            }
-        }
-    };
+    const [state, handleSubmit] = useForm("xrbgwqaa"); // Your Formspree form ID
 
     return (
-        <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-4 w-1/2"
-        >
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full sm:w-3/4 md:w-1/2">
+            {/* Name Field */}
             <label htmlFor="name">Name</label>
             <input
                 type="text"
                 name="name"
-                placeholder="Name"
-                className="bg-[#222222] rounded-md py-1 pl-2"
                 id="name"
+                placeholder="Name"
+                className="bg-[#222222] rounded-md py-1 pl-2 w-full"
                 required
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+
+            {/* Email Field */}
             <label htmlFor="email">Email</label>
             <input
                 type="email"
                 name="email"
-                placeholder="Email"
-                className="rounded-md py-1 pl-2 bg-[#222222]"
                 id="email"
+                placeholder="Email"
+                className="bg-[#222222] rounded-md py-1 pl-2 w-full"
                 required
             />
-            <label htmlFor="subject">Subject</label>
-            <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                className="rounded-md py-1 pl-2 bg-[#222222]"
-                id="subject"
-                required
-            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+
+            {/* Message Field */}
             <label htmlFor="message">Message</label>
             <textarea
                 name="message"
@@ -80,26 +38,23 @@ const ContactForm: React.FC = () => {
                 cols={30}
                 rows={5}
                 placeholder="Message"
-                className="rounded-md py-1 pl-2 bg-[#222222]"
+                className="bg-[#222222] rounded-md py-1 pl-2 w-full"
                 required
-            ></textarea>
+            />
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+
+            {/* Submit Button */}
             <button
                 type="submit"
-                className="bg-[#D3E97A] text-[#222222] font-semibold p-3 rounded-md"
+                disabled={state.submitting}
+                className={`bg-[#D3E97A] text-black font-semibold p-3 rounded-md w-fit ${state.submitting ? 'opacity-50 cursor-not-allowed' : ''
+                    }`}
             >
-                Send
+                {state.submitting ? 'Sending...' : 'Send Message'}
             </button>
-            {/* Success/Error Messages */}
-            {formStatus === "success" && (
-                <p className="text-green-500 font-semibold mt-4">
-                    🎉 Your message has been sent successfully!
-                </p>
-            )}
-            {formStatus === "error" && (
-                <p className="text-red-500 font-semibold mt-4">
-                    ❌ Oops! {errorMessage}
-                </p>
-            )}
+
+            {/* Success Message */}
+            {state.succeeded && <p className="text-green-500">Message sent successfully! 🎉</p>}
         </form>
     );
 };

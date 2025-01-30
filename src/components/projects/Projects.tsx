@@ -6,12 +6,11 @@ import quiz from "../../../public/quiz.png";
 
 const Projects = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className="px-12 flex flex-col gap-36">
-            <div className="flex flex-col gap-2 pb-14">
-                <h1 className="text-5xl text-white">Featured Projects</h1>
-                <h2 className="text-[#C7C7C7]">Here are some of the selected projects that showcase my passion for front-end development.</h2>
+        <div ref={ref} className="px-4 md:px-12 flex flex-col gap-20 md:gap-36">
+            <div className="flex flex-col gap-2 pb-8 md:pb-14">
+                <h1 className="text-3xl md:text-5xl text-white">Featured Projects</h1>
+                <h2 className="text-[#C7C7C7] text-sm md:text-base">Here are some of the selected projects that showcase my passion for front-end development.</h2>
             </div>
-
             <Project
                 image={ecommerce}
                 name={"E-Commerce Platform"}
@@ -39,15 +38,15 @@ const Projects = forwardRef<HTMLDivElement>((_, ref) => {
                 year={2023}
                 description={
                     <>
-                        <p className="text-[#C7C7C7] mb-4 leading-relaxed">Comprehensive <span className="font-bold text-white">admin management system</span> with powerful features.</p>
+                        <p className="text-[#C7C7C7] mb-4 leading-relaxed">A comprehensive <span className="font-bold text-white">admin dashboard</span> built with React.</p>
                         <ol className="list-decimal pl-8 mb-4 text-[#C7C7C7]">
-                            <li className="mb-2 pl-2"><span className="font-semibold text-white">User Management</span> and Role-based Access Control.</li>
-                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Real-time Analytics</span> and Data Visualization.</li>
-                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Responsive Interface</span> with intuitive design.</li>
-                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Advanced Filtering</span> and Search Capabilities.</li>
-                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Secure Authentication</span> Mechanisms.</li>
+                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Data Visualization</span> with Charts and Graphs.</li>
+                            <li className="mb-2 pl-2"><span className="font-semibold text-white">User Management</span> and Authentication.</li>
+                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Responsive Design</span> for All Devices.</li>
+                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Dark/Light Mode</span> Theme Toggle.</li>
+                            <li className="mb-2 pl-2"><span className="font-semibold text-white">Real-time Updates</span>.</li>
                         </ol>
-                        <p className="text-[#C7C7C7] leading-relaxed">Demonstrates <span className="font-bold text-white">complex dashboard development skills</span>.</p>
+                        <p className="text-[#C7C7C7] leading-relaxed">Demonstrates proficiency in <span className="font-bold text-white">React development</span> and <span className="font-bold text-white">UI/UX design</span>.</p>
                     </>
                 }
                 github={"https://github.com/tarekwfa0110/Admin-Dashboard"}

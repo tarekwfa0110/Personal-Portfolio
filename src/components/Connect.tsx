@@ -4,9 +4,9 @@ import ContactForm from './ContactForm';
 
 const Connect = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className="text-white flex justify-between" id="contact">
-            <div className="flex flex-col gap-4 w-1/2">
-                <h1 className="text-7xl font-bold">LET'S CONNECT</h1>
+        <div ref={ref} className="text-white flex flex-col md:flex-row justify-between gap-8 md:gap-4 p-4 md:p-0" id="contact">
+            <div className="flex flex-col gap-4 w-full md:w-1/2">
+                <h1 className="text-4xl md:text-7xl font-bold">LET'S CONNECT</h1>
                 <p>
                     Say hello at{' '}
                     <a href="mailto:tarekmohamedwfa@gmail.com" className="underline">
