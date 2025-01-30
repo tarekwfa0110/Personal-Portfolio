@@ -21,7 +21,7 @@ const App: React.FC = () => {
 
   return (
     <div className="px-4 md:px-12 lg:px-24 py-6 md:py-12 bg-black min-h-screen w-full">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-12">
         <Nav
           scrollToSection={scrollToSection}
           aboutRef={aboutRef}
