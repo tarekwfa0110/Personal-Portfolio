@@ -4,9 +4,9 @@ import { FaGithub } from "react-icons/fa";
 
 function Main() {
     return (
-        <div className="flex flex-col-reverse md:flex-row justify-between items-center text-white px-4 md:px-12 gap-8 md:gap-0">
-            <div className="flex flex-col gap-7 text-center md:text-left">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center text-white w-full gap-8">
+            <div className="flex flex-col gap-7 text-center md:text-left w-full">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold whitespace-normal">
                     HI I AM,<br />TAREK WFA.
                 </h1>
                 <p className="text-[#C7C7C7] text-sm md:text-base">
@@ -20,7 +20,9 @@ function Main() {
                     </div>
                 </div>
             </div>
-            <img src={image} alt="" className="w-[200px] md:w-[300px] lg:w-[400px]" />
+            <div className="w-full flex justify-center md:justify-end">
+                <img src={image} alt="" className="w-[200px] md:w-[300px] lg:w-[400px] object-contain" />
+            </div>
         </div>
     )
 }
