@@ -150,10 +150,15 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
               <p className="text-muted-foreground mb-4">
                 Want to know more about my experience and skills?
               </p>
-              <button className="inline-flex items-center space-x-2 text-primary hover:text-primary-glow transition-colors duration-300">
+              <a 
+                href="/resume/resume_tarek_wfa_frontend.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-primary hover:text-primary-glow transition-colors duration-300"
+              >
                 <span>Download Resume</span>
                 <Send className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </motion.div>
 

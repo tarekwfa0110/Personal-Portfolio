@@ -75,7 +75,7 @@ const Navigation: React.FC<NavigationProps> = ({
             ))}
             
             <motion.a
-              href="/resume.pdf"
+              href="/resume/resume_tarek_wfa_frontend.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gradient-primary text-primary-foreground px-6 py-2.5 rounded-xl font-medium hover:shadow-glow transition-all duration-300"
@@ -125,7 +125,7 @@ const Navigation: React.FC<NavigationProps> = ({
               </button>
             ))}
             <a
-              href="/resume.pdf"
+              href="/resume/resume_tarek_wfa_frontend.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center bg-gradient-primary text-primary-foreground px-6 py-2.5 rounded-xl font-medium"

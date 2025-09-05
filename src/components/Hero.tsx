@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           variants={itemVariants}
           className="inline-flex items-center px-4 py-2 rounded-full bg-card/50 backdrop-blur-sm border border-border mb-8"
         >
-          <div className="w-2 h-2 bg-success rounded-full animate-pulse mr-3" />
+          <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-ping" />
           <span className="text-sm text-muted-foreground">Available for new opportunities</span>
         </motion.div>
 
@@ -156,20 +156,6 @@ const Hero: React.FC = () => {
           ))}
         </motion.div>
 
-        {/* Scroll indicator */}
-        <motion.div
-          variants={itemVariants}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex flex-col items-center text-muted-foreground"
-          >
-            <span className="text-sm mb-2 font-mono">scroll</span>
-            <ChevronDown className="w-5 h-5" />
-          </motion.div>
-        </motion.div>
       </motion.div>
     </section>
   );

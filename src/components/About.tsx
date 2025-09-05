@@ -110,9 +110,14 @@ const About = forwardRef<HTMLElement>((_, ref) => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <button className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:shadow-glow transition-all duration-300">
+              <a 
+                href="/resume/resume_tarek_wfa_frontend.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-gradient-primary text-primary-foreground px-8 py-3 rounded-xl font-medium hover:shadow-glow transition-all duration-300"
+              >
                 Download Resume
-              </button>
+              </a>
             </motion.div>
           </div>
 
