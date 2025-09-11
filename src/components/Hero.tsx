@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 // REMOVED: ChevronDown is no longer needed
 // import { ChevronDown } from 'lucide-react'; 
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import heroBackground from '../assets/hero-bg.jpg';
+// Background image is now served from public folder
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -39,11 +39,6 @@ const Hero: React.FC = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center px-6 lg:px-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBackground}
-          alt="Hero background"
-          className="w-full h-full object-cover opacity-20"
-        />
         <div className="absolute inset-0 bg-gradient-hero" />
       </div>
 
