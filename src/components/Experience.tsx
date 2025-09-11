@@ -11,17 +11,19 @@ const Experience = forwardRef<HTMLElement>((_, ref) => {
 
   const experience = {
     company: "Retink",
-    role: "Frontend Developer Intern",
-    period: "Summer 2024",
+    role: "Backend Developer Intern",
+    period: "2025",
     location: "Remote",
-    description: "Contributed to frontend development projects using modern React technologies and collaborated with senior developers on user interface improvements.",
+    description: "Developed and maintained REST APIs using Node.js and Express, working with PostgreSQL databases and Redis caching for improved performance. Collaborated with cross-functional teams to implement user authentication systems, data validation, and API documentation.",
     achievements: [
-      "Developed responsive web components using React and TypeScript",
-      "Collaborated with design team to implement pixel-perfect UI designs",
-      "Optimized application performance and improved user experience",
-      "Participated in code reviews and agile development processes"
+      "Developed and maintained REST APIs using Node.js and Express",
+      "Worked with PostgreSQL databases and Redis caching for improved performance",
+      "Collaborated with cross-functional teams to implement user authentication systems",
+      "Contributed to database schema optimization and query performance improvements",
+      "Implemented automated testing and gained experience with Git workflows and code reviews",
+      "Worked on production applications serving thousands of users"
     ],
-    skills: ["React", "TypeScript", "JavaScript", "CSS", "Git", "Agile"]
+    skills: ["Node.js", "Express", "PostgreSQL", "Redis", "REST APIs", "Authentication", "Git", "Agile"]
   };
 
   return (

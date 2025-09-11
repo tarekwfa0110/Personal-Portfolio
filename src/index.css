@@ -87,6 +87,7 @@
     color: hsl(var(--foreground));
     font-family: var(--font-primary);
     scroll-behavior: smooth;
+    cursor: none;
   }
   
   body::selection {

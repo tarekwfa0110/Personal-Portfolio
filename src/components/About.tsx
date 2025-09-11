@@ -42,17 +42,17 @@ const About = forwardRef<HTMLElement>((_, ref) => {
     {
       icon: Code,
       title: "Full-Stack Development",
-      description: "Proficient in modern web technologies including React, Node.js, TypeScript, and cloud platforms."
+      description: "Specializing in Next.js, React, and TypeScript on the frontend, with Node.js and PostgreSQL powering the backend. Passionate about AI integration and complex data processing."
     },
     {
       icon: Heart,
-      title: "Medical Student",
-      description: "Studying medicine while pursuing my passion for technology, bringing analytical thinking to development."
+      title: "Continuous Learning",
+      description: "Currently expanding skills in systems programming with Rust and Go, while contributing to open-source projects and creating technical content for Arabic-speaking developers."
     },
     {
       icon: Coffee,
-      title: "Problem Solver",
-      description: "Love tackling complex challenges and creating elegant solutions that make a real impact."
+      title: "Innovation Focus",
+      description: "Drawn to projects involving AI integration, seamless user experiences, and pushing the boundaries of what's possible with web technologies."
     }
   ];
 
@@ -75,21 +75,23 @@ const About = forwardRef<HTMLElement>((_, ref) => {
                 About <span className="gradient-text">Me</span>
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer based in Egypt, currently pursuing my medical degree 
-                while building innovative web applications.
+                I'm a <strong>full-stack developer</strong> passionate about building innovative web applications that solve real problems.
               </p>
             </motion.div>
 
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My journey in technology started with curiosity and has evolved into a deep passion for creating 
-                digital solutions that solve real-world problems. I believe in writing clean, efficient code 
-                and building user-centric applications.
+                My journey started with curiosity about how things work and evolved into a deep love for creating 
+                digital experiences that make a difference. I specialize in building <strong>modern web applications</strong> using 
+                <strong> Next.js</strong>, <strong>React</strong>, and <strong>TypeScript</strong> on the frontend, with <strong>Node.js</strong> and 
+                <strong> PostgreSQL</strong> powering the backend.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me studying medicine, playing football, or exploring new 
-                technologies. I'm always eager to learn and collaborate on exciting projects.
+                I'm particularly drawn to projects that involve <strong>AI integration</strong>, <strong>complex data processing</strong>, 
+                and <strong>seamless user experiences</strong>. Currently expanding my skills in <strong>systems programming</strong> with 
+                <strong> Rust</strong> and <strong>Go</strong>, while contributing to <strong>open-source projects</strong> and sharing knowledge 
+                through technical writing.
               </p>
             </motion.div>
 

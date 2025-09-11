@@ -28,9 +28,9 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
       longDescription: "A sophisticated e-commerce platform specializing in luxury watches, featuring dynamic product listings, advanced filtering, shopping cart functionality, secure checkout process, and responsive design. Built with modern web technologies for optimal performance and user experience.",
       technologies: ["React", "TypeScript", "Tailwind CSS", "Context API", "Vite"],
       liveUrl: "https://chronos-eg.vercel.app",
-      githubUrl: "https://github.com/tarekwfa0110/Chronos-E-Commerce",
+      githubUrl: "https://github.com/tarekwfa0110/Chronos",
       imageUrl: "/src/assets/Chronos-Modern-Watch-Store.png",
-      year: 2024,
+      year: 2025,
       featured: true
     },
     {
@@ -41,7 +41,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
       liveUrl: "https://chronos-dashboard-ten.vercel.app",
       githubUrl: "https://github.com/tarekwfa0110/Chronos-Dashboard",
       imageUrl: "/src/assets/Chronos-Dashboard.png",
-      year: 2024,
+      year: 2025,
       featured: true
     },
     {
@@ -52,7 +52,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
       liveUrl: "https://uniquiz.vercel.app",
       githubUrl: "https://github.com/tarekwfa0110/UniQuiz",
       imageUrl: "/src/assets/UniQuiz-PDF-to-Quiz-Application.png",
-      year: 2024,
+      year: 2025,
       featured: true
     }
   ];
@@ -224,6 +224,174 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Other Projects Section */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="mt-24"
+        >
+          <motion.div
+            variants={itemVariants}
+            className="text-center mb-12"
+          >
+            <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+              Other <span className="gradient-text">Projects</span>
+            </h3>
+            <p className="text-lg text-muted-foreground">
+              Additional projects showcasing my development journey
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {/* E-Commerce Platform */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/src/assets/ecommerce.png"
+                  alt="E-Commerce Platform"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-xl font-semibold text-foreground">E-Commerce Platform</h4>
+                  <span className="text-sm text-primary font-mono">2025</span>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  A fully functional e-commerce website built with React, offering dynamic shopping experience with responsive product listings, shopping cart, and smooth checkout process.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">React</span>
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">Context API</span>
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">React Query</span>
+                </div>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://e-commerce-tarekwfa0110s-projects.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-glow transition-colors text-sm font-medium"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="https://github.com/tarekwfa0110/E-Commerce"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Admin Dashboard */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/src/assets/admin-dashboard.png"
+                  alt="Admin Dashboard"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-xl font-semibold text-foreground">Admin Dashboard</h4>
+                  <span className="text-sm text-primary font-mono">2023</span>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Comprehensive admin dashboard with data visualization, user management, authentication, and responsive design with dark/light mode toggle.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">React</span>
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">Charts.js</span>
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">Authentication</span>
+                </div>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://admin-dashboard-tarekwfa0110s-projects.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-glow transition-colors text-sm font-medium"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="https://github.com/tarekwfa0110/Admin-Dashboard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Nutrient Tracker */}
+            <motion.div
+              variants={itemVariants}
+              className="bg-card/30 backdrop-blur-sm border border-border rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src="/src/assets/nutrtient-tracker.png"
+                  alt="Nutrient Tracker"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="text-xl font-semibold text-foreground">Nutrient Tracker</h4>
+                  <span className="text-sm text-primary font-mono">2025</span>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Comprehensive nutrient tracking application with data visualization, user management, authentication, and responsive design for health monitoring.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">React</span>
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">Data Visualization</span>
+                  <span className="bg-primary/10 text-primary px-2 py-1 rounded text-xs">Health Tech</span>
+                </div>
+                <div className="flex space-x-3">
+                  <a
+                    href="https://nutrtient-tracker.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary-glow transition-colors text-sm font-medium"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="https://github.com/tarekwfa0110/NutrtientTracker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
