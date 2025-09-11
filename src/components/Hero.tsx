@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
             {/* CHANGED: Photo size reduced */}
              <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-muted-foreground/20 group-hover:border-primary/60 transition-all duration-500">
               <img
-                src="/src/assets/Personal-photo.jpg"
+                 src="/Personal-photo.jpg"
                 alt="Tarek Wfa - Full-Stack Developer"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
               />

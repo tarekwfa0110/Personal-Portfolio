@@ -29,7 +29,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
       technologies: ["React", "TypeScript", "Tailwind CSS", "Context API", "Vite"],
       liveUrl: "https://chronos-eg.vercel.app",
       githubUrl: "https://github.com/tarekwfa0110/Chronos",
-      imageUrl: "/src/assets/Chronos-Modern-Watch-Store.png",
+      imageUrl: "/Chronos-Modern-Watch-Store.png",
       year: 2025,
       featured: true
     },
@@ -40,7 +40,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
       technologies: ["React", "TypeScript", "Charts.js", "Admin Panel", "Data Visualization"],
       liveUrl: "https://chronos-dashboard-ten.vercel.app",
       githubUrl: "https://github.com/tarekwfa0110/Chronos-Dashboard",
-      imageUrl: "/src/assets/Chronos-Dashboard.png",
+      imageUrl: "/Chronos-Dashboard.png",
       year: 2025,
       featured: true
     },
@@ -51,7 +51,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
       technologies: ["React", "AI Integration", "PDF Processing", "Quiz Engine", "User Management"],
       liveUrl: "https://uniquiz.vercel.app",
       githubUrl: "https://github.com/tarekwfa0110/UniQuiz",
-      imageUrl: "/src/assets/UniQuiz-PDF-to-Quiz-Application.png",
+      imageUrl: "/UniQuiz-PDF-to-Quiz-Application.png",
       year: 2025,
       featured: true
     }
@@ -258,7 +258,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/src/assets/ecommerce.png"
+                  src="/ecommerce.png"
                   alt="E-Commerce Platform"
                   className="w-full h-full object-cover"
                 />
@@ -305,7 +305,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/src/assets/admin-dashboard.png"
+                  src="/admin-dashboard.png"
                   alt="Admin Dashboard"
                   className="w-full h-full object-cover"
                 />
@@ -352,7 +352,7 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
             >
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src="/src/assets/nutrtient-tracker.png"
+                  src="/nutrtient-tracker.png"
                   alt="Nutrient Tracker"
                   className="w-full h-full object-cover"
                 />
