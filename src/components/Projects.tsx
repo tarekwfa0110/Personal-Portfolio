@@ -24,36 +24,36 @@ const Projects = forwardRef<HTMLElement>((_, ref) => {
   const projects: Project[] = [
     {
       title: "Chronos E-Commerce",
-      description: "A fully functional e-commerce platform with real-time features",
-      longDescription: "Modern e-commerce solution built with React and TypeScript, featuring dynamic product listings, shopping cart functionality, and seamless checkout process with state management using React Context and API integration with React Query.",
-      technologies: ["React", "TypeScript", "Context API", "React Query", "Tailwind CSS"],
-      liveUrl: "https://e-commerce-tarekwfa0110s-projects.vercel.app/",
-      githubUrl: "https://github.com/tarekwfa0110/E-Commerce",
-      imageUrl: "/api/placeholder/600/400",
+      description: "Modern luxury watch e-commerce platform with advanced features",
+      longDescription: "A sophisticated e-commerce platform specializing in luxury watches, featuring dynamic product listings, advanced filtering, shopping cart functionality, secure checkout process, and responsive design. Built with modern web technologies for optimal performance and user experience.",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "Context API", "Vite"],
+      liveUrl: "https://chronos-eg.vercel.app",
+      githubUrl: "https://github.com/tarekwfa0110/Chronos-E-Commerce",
+      imageUrl: "/src/assets/Chronos-Modern-Watch-Store.png",
       year: 2024,
       featured: true
     },
     {
-      title: "Admin Dashboard",
-      description: "Comprehensive admin dashboard with data visualization",
-      longDescription: "Feature-rich admin dashboard with data visualization using charts and graphs, user management, authentication system, responsive design, and dark/light mode theme toggle with real-time updates.",
-      technologies: ["React", "Charts.js", "Authentication", "Responsive Design"],
-      liveUrl: "https://admin-dashboard-tarekwfa0110s-projects.vercel.app/",
-      githubUrl: "https://github.com/tarekwfa0110/Admin-Dashboard",
-      imageUrl: "/api/placeholder/600/400",
-      year: 2023,
+      title: "Chronos Dashboard",
+      description: "Comprehensive admin dashboard for e-commerce management",
+      longDescription: "Feature-rich admin dashboard designed for managing the Chronos e-commerce platform. Includes analytics, user management, product inventory control, order tracking, sales reports, and real-time data visualization with interactive charts and graphs.",
+      technologies: ["React", "TypeScript", "Charts.js", "Admin Panel", "Data Visualization"],
+      liveUrl: "https://chronos-dashboard-ten.vercel.app",
+      githubUrl: "https://github.com/tarekwfa0110/Chronos-Dashboard",
+      imageUrl: "/src/assets/Chronos-Dashboard.png",
+      year: 2024,
       featured: true
     },
     {
-      title: "Nutrient Tracker",
-      description: "Health and nutrition tracking application",
-      longDescription: "Comprehensive nutrient tracking application with data visualization through charts and graphs, user management and authentication, responsive design for all devices, and dark/light mode theme toggle.",
-      technologies: ["React", "Data Visualization", "Authentication", "Responsive Design"],
-      liveUrl: "https://nutrtient-tracker.vercel.app/",
-      githubUrl: "https://github.com/tarekwfa0110/NutrtientTracker",
-      imageUrl: "/api/placeholder/600/400",
+      title: "UniQuiz",
+      description: "AI-powered PDF to Quiz conversion platform",
+      longDescription: "An innovative educational platform that converts PDF documents into interactive quizzes using AI technology. Features include PDF upload and processing, automatic question generation, quiz management, progress tracking, and a user-friendly dashboard for students and educators.",
+      technologies: ["React", "AI Integration", "PDF Processing", "Quiz Engine", "User Management"],
+      liveUrl: "https://uniquiz.vercel.app",
+      githubUrl: "https://github.com/tarekwfa0110/UniQuiz",
+      imageUrl: "/src/assets/UniQuiz-PDF-to-Quiz-Application.png",
       year: 2024,
-      featured: false
+      featured: true
     }
   ];
 
