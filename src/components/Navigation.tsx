@@ -5,6 +5,7 @@ interface NavigationProps {
   scrollToSection: (sectionRef: React.RefObject<HTMLElement>) => void;
   aboutRef: React.RefObject<HTMLElement>;
   projectsRef: React.RefObject<HTMLElement>;
+  ossContributionsRef: React.RefObject<HTMLElement>;
   experienceRef: React.RefObject<HTMLElement>;
   contactRef: React.RefObject<HTMLElement>;
 }
@@ -13,6 +14,7 @@ const Navigation: React.FC<NavigationProps> = ({
   scrollToSection, 
   aboutRef, 
   projectsRef, 
+  ossContributionsRef, 
   experienceRef, 
   contactRef 
 }) => {
@@ -30,6 +32,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
   const navItems = [
     { label: 'About', ref: aboutRef },
+    { label: 'OSS', ref: ossContributionsRef },
     { label: 'Projects', ref: projectsRef },
     { label: 'Experience', ref: experienceRef },
     { label: 'Contact', ref: contactRef }

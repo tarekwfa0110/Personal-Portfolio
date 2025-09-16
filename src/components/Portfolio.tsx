@@ -5,6 +5,7 @@ import Hero from './Hero';
 import About from './About';
 import Projects from './Projects';
 import TechStack from './TechStack';
+import OSSContributions from './OSSContributions';
 import Experience from './Experience';
 import Contact from './Contact';
 import CustomCursor from './CustomCursor';
@@ -13,6 +14,7 @@ import ScrollProgress from './ScrollProgress';
 const Portfolio: React.FC = () => {
   const aboutRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
+  const ossContributionsRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
 
@@ -61,6 +63,7 @@ const Portfolio: React.FC = () => {
           scrollToSection={scrollToSection}
           aboutRef={aboutRef}
           projectsRef={projectsRef}
+          ossContributionsRef={ossContributionsRef}
           experienceRef={experienceRef}
           contactRef={contactRef}
         />
@@ -71,6 +74,8 @@ const Portfolio: React.FC = () => {
           <About ref={aboutRef} />
           
           <TechStack />
+          
+          <OSSContributions ref={ossContributionsRef} />
           
           <Projects ref={projectsRef} />
           

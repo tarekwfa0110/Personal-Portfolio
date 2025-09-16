@@ -1,7 +1,8 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = forwardRef<HTMLElement>((_, ref) => {
   const { ref: inViewRef, inView } = useInView({
@@ -9,32 +10,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
     triggerOnce: true
   });
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', message: '' });
-      alert('Message sent successfully!');
-    }, 2000);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
+  const [state, handleSubmit] = useForm("xrbgwqaa");
 
   const socialLinks = [
     {
@@ -60,6 +36,7 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
   return (
     <section 
       ref={ref as React.RefObject<HTMLElement>}
+      id="contact"
       className="py-24 lg:py-32 px-6 lg:px-8"
     >
       <div ref={inViewRef} className="container mx-auto max-w-6xl">
@@ -185,11 +162,15 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-muted/50 border border-border rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 text-foreground placeholder-muted-foreground"
                   placeholder="Your name"
+                />
+                <ValidationError 
+                  prefix="Name" 
+                  field="name"
+                  errors={state.errors}
+                  className="text-red-400 text-sm mt-1"
                 />
               </div>
 
@@ -204,11 +185,15 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-muted/50 border border-border rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 text-foreground placeholder-muted-foreground"
                   placeholder="your.email@example.com"
+                />
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                  className="text-red-400 text-sm mt-1"
                 />
               </div>
 
@@ -222,23 +207,27 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-muted/50 border border-border rounded-xl focus:outline-none focus:border-primary transition-colors duration-300 text-foreground placeholder-muted-foreground resize-none"
                   placeholder="Tell me about your project or just say hello..."
                 />
+                <ValidationError 
+                  prefix="Message" 
+                  field="message"
+                  errors={state.errors}
+                  className="text-red-400 text-sm mt-1"
+                />
               </div>
 
               <motion.button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={state.submitting}
                 className="w-full bg-gradient-primary text-primary-foreground px-8 py-4 rounded-xl font-medium hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                whileHover={{ scale: state.submitting ? 1 : 1.02 }}
+                whileTap={{ scale: state.submitting ? 1 : 0.98 }}
               >
-                {isSubmitting ? (
+                {state.submitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin" />
                     <span>Sending...</span>
@@ -250,6 +239,17 @@ const Contact = forwardRef<HTMLElement>((_, ref) => {
                   </>
                 )}
               </motion.button>
+
+              {/* Success Message */}
+              {state.succeeded && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="mt-4 p-4 bg-green-500/20 border border-green-500/30 rounded-xl text-green-400 text-center"
+                >
+                  ✅ Thanks for your message! I'll get back to you soon.
+                </motion.div>
+              )}
             </form>
           </motion.div>
         </div>

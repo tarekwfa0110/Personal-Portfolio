@@ -6,7 +6,7 @@ import nutrtientTracker from "../../../public/nutrtient-tracker.png";
 
 const Projects = forwardRef<HTMLDivElement>((_, ref) => {
     return (
-        <div ref={ref} className="px-4 md:px-12 flex flex-col gap-20 md:gap-36">
+        <div ref={ref} id="projects" className="px-4 md:px-12 flex flex-col gap-20 md:gap-36">
             <div className="flex flex-col gap-2 pb-8 md:pb-14">
                 <h1 className="text-3xl md:text-5xl text-white">Featured Projects</h1>
                 <h2 className="text-[#C7C7C7] text-sm md:text-base">Here are some of the selected projects that showcase my passion for front-end development.</h2>

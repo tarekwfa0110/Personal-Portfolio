@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: 'easeInOut',
+        ease: [0.4, 0, 0.2, 1] as const,
       },
     },
   };
@@ -129,20 +129,22 @@ const Hero: React.FC = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
         >
-          <motion.button
-            className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-xl font-medium text-lg hover:shadow-glow transition-all duration-300 glow-on-hover w-full sm:w-auto"
+          <motion.a
+            href="#projects"
+            className="bg-gradient-primary text-primary-foreground px-8 py-3 rounded-xl font-medium text-lg hover:shadow-glow transition-all duration-300 glow-on-hover w-full sm:w-auto text-center"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             View My Work
-          </motion.button>
-          <motion.button
-            className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-medium text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 w-full sm:w-auto"
+          </motion.a>
+          <motion.a
+            href="#contact"
+            className="border-2 border-primary text-primary px-8 py-3 rounded-xl font-medium text-lg hover:bg-primary hover:text-primary-foreground transition-all duration-300 w-full sm:w-auto text-center"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             Get In Touch
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* Social Links */}
